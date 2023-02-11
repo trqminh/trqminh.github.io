@@ -1,1 +1,687 @@
-Pain is inevitable. Suffering is optional.
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Minh Tran</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="9f03ab05-8757-4ca9-a431-096d79735717" class="page sans"><header><h1 class="page-title">Minh Tran</h1></header><div class="page-body"><div id="79cb7d32-ca03-4985-b5a7-058ac540e9d2" class="column-list"><div id="74b7f353-6bb4-432a-92ad-c107b51526c1" style="width:18.75%" class="column"><nav id="236ad92c-ce16-450f-99d6-4044977f0dea" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#9c336583-8b36-48d4-9bc9-10ad32325bd9"><strong>About</strong></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1894e9c1-694b-4042-8ec6-be9ef74a5140">Publications</a></div></nav></div><div id="15cc8faa-8b12-4d1a-b92f-e5c7c425f641" style="width:81.25000000000004%" class="column"><p id="85b3a21d-6387-4e99-8ca5-664fe08c03cf" class=""><em>Ph.D. Student
+Computer Science, University of Arkansas
+</em>[CV][<mark class="highlight-blue"><a href="https://scholar.google.com/citations?user=AmQwXDUAAAAJ&amp;hl=en&amp;oi=ao">Google Scholar</a></mark><mark class="highlight-blue">][</mark><mark class="highlight-blue"><a href="http://github.com/trqminh">Github</a></mark><mark class="highlight-blue">]
+</mark>✉️ <em>minht [at] uark [dot] edu</em></p></div></div><hr id="2f689e63-f610-4a86-adbc-258d8baa84da"/><hr id="98b05f47-b6cf-444f-8b8b-4a7806af3ad3"/><h2 id="9c336583-8b36-48d4-9bc9-10ad32325bd9" class=""><strong>About</strong></h2><p id="a25cd16a-a50a-4414-b87a-573c26f9412d" class="">I am a Ph.D. student in Computer Science at the University of Arkansas, advised by <mark class="highlight-blue"><a href="https://scholar.google.com/citations?user=8ck0k_UAAAAJ&amp;hl=en">Dr. Ngan Le</a></mark>. </p><p id="9525aa2f-c884-4f1a-bbaa-72ba0cb28e56" class="">My current research is about image segmentation, particularly amodal instance segmentation. Before this, I have worked on some other projects related to medical imaging and robot navigation.</p><hr id="a71678db-c3d7-44e2-80b6-3472f932e096"/><hr id="1d658c10-f26a-4713-a1ad-53dd04fb65ff"/><h2 id="1894e9c1-694b-4042-8ec6-be9ef74a5140" class="">Publications</h2><p id="e889d014-64e5-4b91-9c6c-3513fe661efa" class=""><em><code>*</code></em><em> indicates equal contribution</em></p><div id="1d30bf76-4d3c-43ff-bc22-ca41c6abc27f" class="column-list"><div id="67b80e2f-9c9d-4f12-b42b-68597868bc69" style="width:12.5%" class="column"><p id="3af59a19-606f-4348-8605-c2753ef38cf0" class=""><mark class="highlight-gray"><em>2022</em></mark></p></div><div id="c911e29d-6cf1-48dd-bd17-074d8fbd3087" style="width:87.5%" class="column"><hr id="41ee8cf2-8534-4410-9fff-fb17871218d2"/></div></div><div id="33a5e0a6-35be-4741-8f79-bd0080b78dc8" class="column-list"><div id="001e6a71-7091-452e-a982-489990d8ee68" style="width:18.75%" class="column"><figure id="a0cb501c-2b56-4615-9eb6-d1136c8fbe17" class="image"><a href="Minh%20Tran%209f03ab0587574ca9a431096d79735717/Untitled.png"><img style="width:1928px" src="Minh%20Tran%209f03ab0587574ca9a431096d79735717/Untitled.png"/></a></figure></div><div id="c170cdad-37f7-4b32-b746-4c72fcf0a6e6" style="width:81.25%" class="column"><p id="2b0d8acb-681b-4e76-9d5b-f9e60701244a" class=""><strong>AISFormer: Amodal Instance Segmentation with Transformer</strong>
+<span style="border-bottom:0.05em solid">Minh Tran</span>, Khoa Vo, Kashu Yamazaki, Arthur Fernandes, Michael Kidd, Ngan Le
+<em>British Machine Vision Conference, 2022 </em><mark class="highlight-orange_background">conference</mark></p><p id="73b53afb-9bc8-4864-8fcf-fcb12945dd17" class="">[<a href="https://arxiv.org/abs/2210.06323">Paper</a>][<a href="https://github.com/UARK-AICV/AISFormer">Code</a>]</p></div></div><div id="28490124-db45-4aff-b4be-2ae13bcbb3f6" class="column-list"><div id="07b05796-e0a0-4a7a-a57c-853983b0e548" style="width:18.75%" class="column"><figure id="a16725ce-8467-47cd-a1b7-ff3ab513a6a3" class="image"><a href="Minh%20Tran%209f03ab0587574ca9a431096d79735717/Untitled%201.png"><img style="width:1792px" src="Minh%20Tran%209f03ab0587574ca9a431096d79735717/Untitled%201.png"/></a></figure></div><div id="4642dacb-d839-4e6f-a12c-c4b5d46f3b87" style="width:81.25%" class="column"><p id="9af724ef-4a2e-4a73-85ee-f5eef1498f16" class=""><strong>3DConvCaps: 3DUnet with Convolutional Capsule Encoder for Medical Image Segmentation</strong>
+<span style="border-bottom:0.05em solid">Minh Tran</span>, Viet-Khoa Vo-Ho, Ngan T.H. Le <mark class="highlight-orange_background">conference</mark>
+<em>International Conference on Pattern Recognition, 2022</em></p><p id="1dc6525e-1f95-4858-8ec2-3497662688f6" class="">[<a href="https://arxiv.org/abs/2205.09299">Paper</a>][<a href="https://github.com/UARK-AICV/3DConvCaps">Code</a>]</p></div></div><div id="a05c9d90-fc0c-43ff-8290-610524beba1d" class="column-list"><div id="a380d051-6f37-43d5-ab33-713502f3807c" style="width:18.75%" class="column"><figure id="e89a270d-9b38-49f5-9a0c-79f7d40649aa" class="image"><a href="Minh%20Tran%209f03ab0587574ca9a431096d79735717/Untitled%202.png"><img style="width:1414px" src="Minh%20Tran%209f03ab0587574ca9a431096d79735717/Untitled%202.png"/></a></figure></div><div id="294a98a7-94c6-4c16-933c-7a800cf7e222" style="width:81.25%" class="column"><p id="1dc31636-df95-47a0-bd79-c4174ff47ef1" class=""><strong>Light-weight deformable registration using adversarial learning with distilling knowledge</strong>
+<span style="border-bottom:0.05em solid">Minh Tran*</span>, Tuong Do*, Huy Tran, Erman Tjiputra, Quang D Tran, Anh Nguyen
+<em>IEEE Transactions on Medical Imaging, 2022</em> <mark class="highlight-red_background">journal</mark></p><p id="814cd7ea-2a64-4466-bc19-381caa84d9ae" class="">[<a href="https://ieeexplore.ieee.org/abstract/document/9672098/">Paper</a>][<a href="https://github.com/aioz-ai/LDR_ALDK">Code</a>]</p></div></div><div id="7125dbd4-6e69-49a1-8c7c-e507ecc9983e" class="column-list"><div id="4a25b041-80ee-4240-86bd-4578476c2d07" style="width:18.75%" class="column"><figure id="c02c8e38-97c4-46ac-be82-d58886db5bf8" class="image" style="text-align:center"><a href="Minh%20Tran%209f03ab0587574ca9a431096d79735717/Untitled%203.png"><img style="width:96px" src="Minh%20Tran%209f03ab0587574ca9a431096d79735717/Untitled%203.png"/></a></figure></div><div id="d0b0d094-ccdc-481d-ab3b-e21337b9d29d" style="width:81.25%" class="column"><p id="32a9cabd-94b3-4600-b453-541adfa75e4f" class=""><strong>Deep Federated Learning for Autonomous Driving</strong>
+Anh Nguyen, Tuong Do,<strong> </strong><span style="border-bottom:0.05em solid">Minh Tran</span>, Binh X Nguyen, Chien Duong, Tu Phan, Erman Tjiputra, Quang D Tran
+<em>IEEE Intelligent Vehicles Symposium, 2022</em> <mark class="highlight-orange_background">conference</mark></p><p id="774bc02c-e2a4-47df-bcbc-25e6a339db5d" class="">[<a href="https://arxiv.org/abs/2110.05754">Paper</a>][<a href="https://github.com/aioz-ai/FADNet">Code</a>]</p></div></div><div id="a87d295d-0fbd-4645-a1be-c8a2b3510080" class="column-list"><div id="9d15c500-206a-4b50-abcc-50ae6b6b8718" style="width:18.75%" class="column"><figure id="b76a57ab-844d-450c-a42b-f0303d0a593c" class="image"><a href="Minh%20Tran%209f03ab0587574ca9a431096d79735717/Untitled%204.png"><img style="width:646px" src="Minh%20Tran%209f03ab0587574ca9a431096d79735717/Untitled%204.png"/></a></figure></div><div id="0236b322-22f0-4be4-a318-fbc04531edaa" style="width:81.25%" class="column"><p id="2be1137d-5649-4934-a572-d75c569bd254" class=""><strong>SS-3DCapsNet: Self-supervised 3D Capsule Networks for Medical Segmentation on Less Labeled Data</strong>
+<span style="border-bottom:0.05em solid">Minh Tran</span>, Loi Ly, Binh-Son Hua, Ngan Le
+<em>IEEE International Symposium on Biomedical Imaging, 2022</em> <mark class="highlight-orange_background">conference</mark></p><p id="7888439e-f042-499c-a509-1b6248285e99" class="">[<a href="https://arxiv.org/abs/2201.05905">Paper</a>][Code]</p></div></div><div id="6bb3bd0b-cdac-43a0-8300-fe33c7f460d5" class="column-list"><div id="c3d93486-babc-4bde-a8fb-9b4166fa73cd" style="width:12.5%" class="column"><p id="6a2cf47c-bb36-44a6-a3b4-0bcc140d0e25" class=""><mark class="highlight-gray"><em>2021</em></mark></p></div><div id="a5bbbe21-b409-48bb-bc4c-1d4d6de712db" style="width:87.5%" class="column"><hr id="d5432c06-7e24-4935-8edb-0aecc80986f7"/></div></div><div id="b6081743-059a-404f-85be-687bbb4de5fa" class="column-list"><div id="eaf1ad82-ff0d-48fd-a0d4-78442b0ba265" style="width:18.75%" class="column"><figure id="12fd3168-1863-496c-ad77-c4d711fbf95a" class="image"><a href="Minh%20Tran%209f03ab0587574ca9a431096d79735717/Untitled%205.png"><img style="width:982px" src="Minh%20Tran%209f03ab0587574ca9a431096d79735717/Untitled%205.png"/></a></figure></div><div id="e1f3740c-5822-47a8-bbf8-297b30cef34c" style="width:81.25%" class="column"><p id="4d6deff2-3ca0-4992-99bf-9ad52758e94f" class=""><strong>Multiple meta-model quantifying for medical visual question answering</strong>
+Tuong Do, Binh X Nguyen, Erman Tjiputra, <span style="border-bottom:0.05em solid">Minh Tran</span>, Quang D Tran, Anh Nguyen
+<em>MICCAI 2021</em> <mark class="highlight-orange_background">conference</mark></p><p id="2078624b-882e-4e79-8f0e-24e618279cba" class="">[<a href="https://link.springer.com/chapter/10.1007/978-3-030-87240-3_7">Paper</a>][<a href="https://github.com/aioz-ai/MICCAI21_MMQ">Code</a>]</p></div></div><div id="d5f187b4-b587-494e-b133-1e93f7343f72" class="column-list"><div id="961f90aa-d51f-4794-8c8b-9b795dc432ae" style="width:12.5%" class="column"><p id="322613d5-924e-49c0-b3d4-f588eec5fd56" class=""><mark class="highlight-gray"><em>2020</em></mark></p></div><div id="c6fafe32-7191-4e42-8d25-70f17b5d16e8" style="width:87.5%" class="column"><hr id="c526ec15-60b5-4204-8a24-43bad1c104a9"/></div></div><div id="1737b7a2-39fe-4542-8af6-457fc2e4ea61" class="column-list"><div id="c9bd675a-3c23-4a9f-9f27-351b2aa91352" style="width:18.75%" class="column"><figure id="1953dd51-6c53-41a5-b919-23faeb168027" class="image" style="text-align:center"><a href="Minh%20Tran%209f03ab0587574ca9a431096d79735717/Untitled%206.png"><img style="width:132px" src="Minh%20Tran%209f03ab0587574ca9a431096d79735717/Untitled%206.png"/></a></figure></div><div id="d8617a98-f651-4293-99e1-c96dda342dee" style="width:81.25%" class="column"><p id="2ca5335c-75ff-457b-9265-fe5a6b57c3c9" class=""><strong>Mobile Robot Planner with Low-cost Cameras Using Deep Reinforcement Learning</strong>
+<span style="border-bottom:0.05em solid">Minh Tran</span>, Ngoc Q Ly
+<em>IEEE NICS 2020</em> <mark class="highlight-orange_background">conference</mark></p><p id="5ebe38bb-4049-4067-a1c9-de5460aefeac" class="">[<a href="https://ieeexplore.ieee.org/abstract/document/9335852/">Paper</a>][<a href="https://github.com/trqminh/rl-mapless-navigation">Code</a>]</p></div></div><hr id="c7c4ee4d-0567-4587-84e7-06a5e67e341c"/><hr id="0a7a9853-bb01-4b11-84a8-88cc8693c474"/><p id="f36d25a1-3d83-4e71-a7b0-d855a5dafbba" class=""><mark class="highlight-gray"><em>Last updated November 8, 2022.</em></mark></p><p id="d6d1fc20-05ae-46d3-8078-721c4557fd3c" class="">
+</p></div></article></body></html>
