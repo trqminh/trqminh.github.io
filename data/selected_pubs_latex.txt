@@ -1,0 +1,76 @@
+\vspace{0.2cm}
+\section{\textbf{Selected Publications} \hfill \textcolor{darkblue} {\scriptsize \href{https://scholar.google.com/citations?user=AmQwXDUAAAAJ}{Full List}}}
+
+\noindent{\large\textit{Conferences}}
+\begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={\textbf{NeurIPS 2024}}, itemindent=0em, label={\textbf{[\arabic*]}}]
+\item[\textbf{ICCV 2025}]
+\textbf{CT-ScanGaze: A Dataset and Baselines for 3D Volumetric Scanpath Modeling}
+\,[\href{https://arxiv.org/abs/2507.12591}{paper}, \href{https://github.com/UARK-AICV/CTScanGaze}{code}] \\
+{\it Trong Thang Pham, Akash Awasthi, Saba Khan, Esteban Duran Marti, Tien-Phat Nguyen, Khoa Vo, \underline{Minh Tran}, Son Nguyen, Cuong Tran, Yuki Ikebe, Anh Totti Nguyen, Anh Nguyen, Zhigang Deng, Carol C Wu, Hien Nguyen, Ngan Le} \\
+{\small \textit{Proceedings of the IEEE/CVF International Conference on Computer Vision, \textbf{Highlight paper}, 2025}}
+
+\item[\textbf{ICCV 2025}]
+\textbf{DualFit: A Two-Stage Virtual Try-On via Warping and Synthesis}
+\,[\href{https://arxiv.org/abs/2508.12131}{paper}] \\
+{\it \underline{Minh Tran}, Johnmark Clements, Annie Prasanna Manoharan, Tri Nguyen, Ngan Le} \\
+{\small \textit{Proceedings of the IEEE/CVF International Conference on Computer Vision, Retail Vision, 2025}}
+
+\item[\textbf{ICRA 2024}]
+\textbf{Open-fusion: Real-time open-vocabulary 3d mapping and queryable scene representation}
+\,[\href{https://arxiv.org/pdf/2310.03923}{paper}, \href{https://github.com/UARK-AICV/OpenFusion}{code}] \\
+{\it Kashu Yamazaki, Taisei Hanyu, Khoa Vo, Thang Pham, \underline{Minh Tran}, Gianfranco Doretto, Anh Nguyen, Ngan Le} \\
+{\small \textit{2024 IEEE International Conference on Robotics and Automation (ICRA), 2024}}
+
+\item[\textbf{IJCNN 2024}]
+\textbf{Shapeformer: Shape prior visible-to-amodal transformer-based amodal instance segmentation}
+\,[\href{https://arxiv.org/abs/2403.11376}{paper}, \href{https://github.com/UARK-AICV/ShapeFormer}{code}] \\
+{\it \underline{Minh Tran}, Winston Bounsavy, Khoa Vo, Anh Nguyen, Tri Nguyen, Ngan Le} \\
+{\small \textit{2024 International Joint Conference on Neural Networks (IJCNN), 2024}}
+
+\item[\textbf{ACCV 2024}]
+\textbf{Amodal Instance Segmentation with Diffusion Shape Prior Estimation}
+\,[\href{https://arxiv.org/abs/2409.18256}{paper}] \\
+{\it \underline{Minh Tran}, Khoa Vo, Tri Nguyen, Ngan Le} \\
+{\small \textit{Proceedings of the Asian Conference on Computer Vision, 2024}}
+
+\item[\textbf{NeurIPS 2024}]
+\textbf{Henasy: Learning to assemble scene-entities for interpretable egocentric video-language model}
+\,[\href{https://arxiv.org/abs/2406.00307}{paper}] \\
+{\it Khoa Vo, Thinh Phan, Kashu Yamazaki, \underline{Minh Tran}, Ngan Le} \\
+{\small \textit{Advances in Neural Information Processing Systems, 2024}}
+
+\item[\textbf{ISBI 2022}]
+\textbf{SS-3DCapsNet: Self-supervised 3D Capsule Networks for Medical Segmentation on Less Labeled Data}
+\,[\href{https://arxiv.org/pdf/2201.05905}{paper}] \\
+{\it \underline{Minh Tran}, Loi Ly, Binh-Son Hua, Ngan Le} \\
+{\small \textit{2022 IEEE International Symposium on Biomedical Imaging (ISBI), \textbf{Oral Presentation}, 2022}}
+
+\item[\textbf{BMCV 2022}]
+\textbf{AISFormer: Amodal Instance Segmentation with Transformer}
+\,[\href{https://arxiv.org/pdf/2210.06323}{paper}, \href{https://github.com/UARK-AICV/AISFormer}{code}, \href{https://uark-aicv.github.io/AISFormer/}{page}] \\
+{\it \underline{Minh Tran}, Khoa Vo, Kashu Yamazaki, Arthur Fernandes, Michael Kidd, Ngan Le} \\
+{\small \textit{The 33rd British Machine Vision Conference, 2022, 2022}}
+
+\item[\textbf{MICCAI 2021}]
+\textbf{Multiple meta-model quantifying for medical visual question answering}
+\,[\href{https://arxiv.org/abs/2105.08913}{paper}] \\
+{\it Tuong Do, Binh X. Nguyen, Erman Tjiputra, \underline{Minh Tran}, Quang D. Tran, Anh Nguyen} \\
+{\small \textit{Medical Image Computing and Computer Assisted Intervention–MICCAI 2021, 2021}}
+
+\end{enumerate}
+
+\noindent{\large\textit{Journals}}
+\begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={\textbf{NeurIPS 2024}}, itemindent=0em, label={\textbf{[\arabic*]}}]
+\item[\textbf{IMAVIS 2025}]
+\textbf{A2VIS: Amodal-Aware Approach to Video Instance Segmentation}
+\,[\href{https://arxiv.org/pdf/2412.01147}{paper}, \href{https://github.com/UARK-AICV/A2VIS}{code}, \href{https://uark-aicv.github.io/A2VIS/}{page}] \\
+{\it \underline{Minh Tran}, Thang Pham, Winston Bounsavy, Tri Nguyen, Ngan Le} \\
+{\small \textit{Image and Vision Computing, 2025}}
+
+\item[\textbf{TMI 2022}]
+\textbf{Light-weight deformable registration using adversarial learning with distilling knowledge}
+\,[\href{https://arxiv.org/abs/2110.01293}{paper}, \href{https://github.com/aioz-ai/LDR_ALDK}{code}] \\
+{\it \underline{Minh Tran}, Tuong Do, Huy Tran, Erman Tjiputra, Quang D Tran, Anh Nguyen} \\
+{\small \textit{IEEE transactions on medical imaging, 2022}}
+
+\end{enumerate}
