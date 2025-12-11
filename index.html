@@ -3,374 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Home">
-    <meta name="author" content="Minh Tran">
-    <meta property="og:image" content="dp.jpg">
+    <meta name="description" content="Minh Tran">
+    <meta name="keywords" content="Computer Science, PhD Student, Research, Computer Vision">
+    <meta name="author" content="Anonymous">
+    <meta property="og:title" content="Minh Tran - PhD Student">
+    <meta property="og:description" content="Research in computer vision">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="#">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@anonymous">
     <title>Minh Tran</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
-<script>
-    // Apply user's previous choice; default is light.
-    const saved = localStorage.getItem('theme');
-    if (saved === 'dark') {
-      document.body.classList.add('dark-mode');
-    } else if (saved === 'light') {
-      document.body.classList.remove('dark-mode');
-    }
-</script>
-
-<body>
-    <header class="navbar">
-        <div class="container">
-            <div class="logo">Minh</div>
-            <nav>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="data/CV.pdf">CV</a></li>
-            </ul>
-            </nav>
-            <div class="nav-icons">
-            <i class="fas fa-moon" id="theme-toggle"></i>
+<body id="top">
+    <header>
+        <div class="header-content">
+            <h1>Minh Tran</h1>
+            <p>CS PhD Student • University of Arkansas</p>
+            <div class="social-links-header">
+                <a href="https://scholar.google.com/citations?user=AmQwXDUAAAAJ"><i class="fas fa-graduation-cap"></i>Google Scholar</a>
+                <a href="https://x.com/minhtrann"><i class="fab fa-twitter"></i>Twitter</a>
+                <a href="https://www.linkedin.com/in/minh-tran-a10b8b176/"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                <a href="https://github.com/trqminh"><i class="fab fa-github"></i>GitHub</a>
+                <a href="mailto:minht@uark.edu"><i class="fas fa-envelope"></i>Email</a>
             </div>
+        </div>
+        <div class="header-image">
+            <img src="data/profile.jpg" alt="Profile Photo">
         </div>
     </header>
 
-    <section id="about">
-        <div class="container">
-        <div class="section-wrapper">
-        <div class="section-title">About</div>
-        <div class="section-content">
-        </div>
-        </div>
-        <div class="about-wrapper">
-        <div class="about-left">
-            <img src="dp.jpg" alt="Profile Photo" class="profile-pic">
-            <h2>Minh Tran</h2>
-            <p class="role">PhD Student @ University of Arkansas</p>
-            <div class="social-icons">
-            <a href="mailto:minhtranquangcr@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://scholar.google.com/citations?user=AmQwXDUAAAAJ"><i class="fab fa-google-scholar"></i></a>
-            <a href="https://github.com/trqminh"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/minh-tran-a10b8b176/"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/minhtrann"><i class="fab fa-twitter"></i></a>
-            </div>
-        </div>
-
-        <div class="about-right">
+    <main>
+        <section id="about">
             <p>
             I am a Ph.D. student in Computer Science at the University of Arkansas, advised by <a href="https://scholar.google.com/citations?user=8ck0k_UAAAAJ&hl=en">Ngan Le</a>. Before starting my Ph.D., I was a research assistant at <a href="https://aioz.network/">AIOZ AI</a>, advised by <a href="https://scholar.google.com/citations?user=qCcSKkMAAAAJ&hl=en">Tuong Do</a> and <a href="https://scholar.google.com/citations?user=gEbaF0sAAAAJ&hl=en">Anh Nguyen</a>.
             </p>
             <p>
               My research interests are algorithms for visual generative tasks (amodal completion, image inpainting, virtual try-on, etc.); visual perception tasks (object detection, segmentation, and tracking); and vision and language interaction (VLMs, text-guided generation). 
             </p>
-        </div>
-        </div>
-        </div>
-        <hr class="section-divider">
-    </section>
+        </section>
 
-    <section id="publications">
-        <div class="container">
-        <div class="section-wrapper">
-            <div class="section-title">Recent Papers (<a href="https://scholar.google.com/citations?user=AmQwXDUAAAAJ" target="_blank">Full Papers</a>) </div>
-            <div class="section-content">
+        <!-- <section id="research">
+            <h2>Research</h2>
+            <p>My research focuses on <strong>[topics]</strong>. My recent works explore:</p>
+            <ul>
+                <li>[Research Topic 1] (<a href="#">[Conference 1]'24</a>, <a href="#">[Conference 2]'23</a>, <a href="#">[Conference 3]'22</a>)</li>
+                <li>[Research Topic 2] (<a href="#">[Conference 4]'24</a>, <a href="#">[Conference 5]'23</a>, <a href="#">[Conference 6]'23</a>)</li>
+                <li>[Research Topic 3] (<a href="#">[Conference 7]'24</a>, <a href="#">[Conference 8]'23</a>, <a href="#">[Conference 9]'23</a>)</li>
+                <li>[Research Topic 4] (<a href="#">[Journal 1]'22</a>, <a href="#">[Journal 2]'21</a>)</li>
+            </ul>
+        </section> -->
 
-                <div class="publication">
-                    <img src="pub_thumbnails/dualfit.png" ></img>
-                    <div class="pub-info">
-                        <p><strong><a href="https://uark-aicv.github.io/DualFit">DualFit: A Two-Stage Virtual Try-On via Warping and Synthesis</a></strong><br>
-                        <a class="author me" href="http://trqminh.github.io/" target="_blank">Minh Tran*</a>,
-                        <a class="author" target="_blank"> Johnmark Clements, Annie Prasanna, Tri Nguyen, Ngan Le</a><br>
-                        <span class="conference">ICCVW &middot; 2025 &middot;</span><br>
-                        </p>
-                        <div class="pub-links">
-                            <a href="https://uark-aicv.github.io/DualFit" class="pub-link">Project page</a>
-                            <a href="https://arxiv.org/abs/2508.12131" class="pub-link">Arxiv</a>
-                            <a href="https://github.com/UARK-AICV/DualFit" class="pub-link">Code</a>
-                            <details class="pub-link">
-                                <summary>Cite</summary>
-                                <pre>
-@inproceedings{tran2025dualfit,
-  title={DualFit: A Two-Stage Virtual Try-On via Warping and Synthesis},
-  author={Tran, Minh and Clements, Johnmark and Manoharan, Annie Prasanna and Nguyen, Tri and Le, Ngan},
-  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
-  pages={2397--2407},
-  year={2025}
-}                   </pre>
-                            </details>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="publication">
-                    <img src="pub_thumbnails/ct_scangaze.png" ></img>
-                    <div class="pub-info">
-                        <p><strong><a href="https://github.com/UARK-AICV/CTScanGaze">CT-ScanGaze: A Dataset and Baselines for 3D Volumetric Scanpath Modeling</a></strong><br>
-                        <a class="author" href="https://phamtrongthang123.github.io/" target="_blank">Thang Pham</a>,
-                        <a class="author" target="_blank">Akash Awasthi</a>,
-                        <a class="author" target="_blank">Saba Khan</a>,
-                        <a class="author" target="_blank">Esteban Duran Marti</a>,
-                        <a class="author" target="_blank">Tien-Phat Nguyen</a>,
-                        <a class="author" target="_blank">Khoa Vo</a>,
-                        <a class="author me" href="http://trqminh.github.io/" target="_blank">Minh Tran</a>,
-                        <a class="author" target="_blank">Ngoc Son Nguyen, Cuong Tran Van, Yuki Ikebe, Anh Totti Nguyen, Anh Nguyen, Zhigang Deng, Carol C. Wu, Hien Van Nguyen, Ngan Le</a><br>
-                        <span class="conference">ICCV  &middot; 2025 &middot; </span>
-                        <span class="pub-badge">⭐ Highlight</span><br>
-                        </p>
-                        <div class="pub-links">
-                            <a href="https://arxiv.org/abs/2507.12591" class="pub-link">Arxiv</a>
-                            <a href="https://github.com/UARK-AICV/CTScanGaze" class="pub-link">Code</a>
-                            <details class="pub-link">
-                                <summary>Cite</summary>
-                                <pre>
-@inproceedings{pham2025ct,
-  title={CT-ScanGaze: A Dataset and Baselines for 3D Volumetric Scanpath Modeling},
-  author={Pham, Trong Thang and Awasthi, Akash and Khan, Saba and Marti, Esteban Duran and Nguyen, Tien-Phat and Vo, Khoa and Tran, Minh and Nguyen, Son and Tran, Cuong and Ikebe, Yuki and others},
-  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
-  pages={21732--21743},
-  year={2025}
-}
-                          </pre>
-                            </details>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="publication">
-                    <img src="pub_thumbnails/a2vis.png" ></img>
-                    <div class="pub-info">
-                        <p><strong><a href="https://uark-aicv.github.io/A2VIS">A2VIS: Amodal-aware Approach to Video Instance Segmentation</a></strong><br>
-                        <a class="author me" href="http://trqminh.github.io/" target="_blank">Minh Tran*</a>,
-                        <a class="author" href="https://phamtrongthang123.github.io/" target="_blank">Thang Pham*</a>,
-                        <a class="author" target="_blank">Winston Bounsavy</a>,
-                        <a class="author" target="_blank">Tri Nguyen</a>,
-                        <a class="author" target="_blank">Ngan Le</a><br>
-                        <span class="conference">IMAVIS &middot; 2025 &middot;</span><br>
-                        </p>
-                        <div class="pub-links">
-                            <a href="https://uark-aicv.github.io/A2VIS" class="pub-link">Project page</a>
-                            <a href="https://arxiv.org/abs/2412.01147" class="pub-link">Arxiv</a>
-                            <a href="https://github.com/UARK-AICV/A2VIS" class="pub-link">Code</a>
-                            <details class="pub-link">
-                                <summary>Cite</summary>
-                                <pre>
-@article{tran2025a2vis,
-  title={A2VIS: Amodal-Aware Approach to Video Instance Segmentation},
-  author={Tran, Minh and Pham, Thang and Bounsavy, Winston and Nguyen, Tri and Le, Ngan},
-  journal={Image and Vision Computing},
-  pages={105543},
-  year={2025},
-  publisher={Elsevier}
-}                          </pre>
-                            </details>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="publication">
-                    <img src="pub_thumbnails/aisformer.png" ></img>
-                    <div class="pub-info">
-                        <p><strong><a href="https://uark-aicv.github.io/AISFormer">AISFormer: Amodal Instance Segmentation with Transformer</a></strong><br>
-                        <a class="author me" href="http://trqminh.github.io/" target="_blank">Minh Tran*</a>,
-                        <a class="author" target="_blank">Khoa Vo, Kashu Yamazaki, Arthur Fernandes, Michael Kidd, Ngan Le</a><br>
-                        <span class="conference">BMVC &middot; 2022 &middot;</span><br>
-                        </p>
-                        <div class="pub-links">
-                            <a href="https://uark-aicv.github.io/AISFormer" class="pub-link">Project page</a>
-                            <a href="https://arxiv.org/abs/2210.06323" class="pub-link">Arxiv</a>
-                            <a href="https://github.com/UARK-AICV/AISFormer" class="pub-link">Code</a>
-                            <details class="pub-link">
-                                <summary>Cite</summary>
-                                <pre>
-@article{tran2022aisformer,
-  title={Aisformer: Amodal instance segmentation with transformer},
-  author={Tran, Minh and Vo, Khoa and Yamazaki, Kashu and Fernandes, Arthur and Kidd, Michael and Le, Ngan},
-  journal={arXiv preprint arXiv:2210.06323},
-  year={2022}
-}                        </pre>
-                            </details>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="publication">
-                    <img src="pub_thumbnails/a2vis_amodal_aware_approach_to_video_instance_segmentation.png" ></img>
-                    <div class="pub-info">
-                        <p><strong><a href="https://uark-aicv.github.io/A2VIS/">A2VIS: Amodal-Aware Approach to Video Instance Segmentation</a></strong><br>
-                        <span class="author me">Minh Tran</span>, <span class="author">Thang Pham</span>, <span class="author">Winston Bounsavy</span>, <span class="author">Tri Nguyen</span>, <span class="author">Ngan Le</span><br>
-                        <span class="conference">IMAVIS &amp;middot; 2025 &amp;middot;</span><br>
-                        </p>
-                        <div class="pub-links">
-        <a href="https://uark-aicv.github.io/A2VIS/" class="pub-link">Project page</a>
-        <a href="https://arxiv.org/pdf/2412.01147" class="pub-link">Paper</a>
-        <a href="https://github.com/UARK-AICV/A2VIS" class="pub-link">Code</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="publication">
-                    <img src="pub_thumbnails/ct_scangaze_a_dataset_and_baselines_for_3d_volumetric_scanpath_modeling.png" ></img>
-                    <div class="pub-info">
-                        <p><strong><a href="https://arxiv.org/abs/2507.12591">CT-ScanGaze: A Dataset and Baselines for 3D Volumetric Scanpath Modeling</a></strong><br>
-                        <span class="author">Trong Thang Pham</span>, <span class="author">Akash Awasthi</span>, <span class="author">Saba Khan</span>, <span class="author">Esteban Duran Marti</span>, <span class="author">Tien-Phat Nguyen</span>, <span class="author">Khoa Vo</span>, <span class="author me">Minh Tran</span>, <span class="author">Son Nguyen</span>, <span class="author">Cuong Tran</span>, <span class="author">Yuki Ikebe</span>, <span class="author">Anh Totti Nguyen</span>, <span class="author">Anh Nguyen</span>, <span class="author">Zhigang Deng</span>, <span class="author">Carol C Wu</span>, <span class="author">Hien Nguyen</span>, <span class="author">Ngan Le</span><br>
-                        <span class="conference">ICCV &amp;middot; 2025 &amp;middot;</span><br>
-                        </p>
-                        <div class="pub-links">
-        <a href="https://arxiv.org/abs/2507.12591" class="pub-link">Paper</a>
-        <a href="https://github.com/UARK-AICV/CTScanGaze" class="pub-link">Code</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="publication">
-                    <img src="pub_thumbnails/dualfit_a_two_stage_virtual_try_on_via_warping_and_synthesis.png" ></img>
-                    <div class="pub-info">
-                        <p><strong><a href="https://arxiv.org/abs/2508.12131">DualFit: A Two-Stage Virtual Try-On via Warping and Synthesis</a></strong><br>
-                        <span class="author me">Minh Tran</span>, <span class="author">Johnmark Clements</span>, <span class="author">Annie Prasanna Manoharan</span>, <span class="author">Tri Nguyen</span>, <span class="author">Ngan Le</span><br>
-                        <span class="conference">ICCV &amp;middot; 2025 &amp;middot;</span><br>
-                        </p>
-                        <div class="pub-links">
-        <a href="https://arxiv.org/abs/2508.12131" class="pub-link">Paper</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="publication">
-                    <img src="pub_thumbnails/open_fusion_real_time_open_vocabulary_3d_mapping_and_queryable_scene_representation.png" ></img>
-                    <div class="pub-info">
-                        <p><strong><a href="https://arxiv.org/pdf/2310.03923">Open-fusion: Real-time open-vocabulary 3d mapping and queryable scene representation</a></strong><br>
-                        <span class="author">Kashu Yamazaki</span>, <span class="author">Taisei Hanyu</span>, <span class="author">Khoa Vo</span>, <span class="author">Thang Pham</span>, <span class="author me">Minh Tran</span>, <span class="author">Gianfranco Doretto</span>, <span class="author">Anh Nguyen</span>, <span class="author">Ngan Le</span><br>
-                        <span class="conference">ICRA &amp;middot; 2024 &amp;middot;</span><br>
-                        </p>
-                        <div class="pub-links">
-        <a href="https://arxiv.org/pdf/2310.03923" class="pub-link">Paper</a>
-        <a href="https://github.com/UARK-AICV/OpenFusion" class="pub-link">Code</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="publication">
-                    <img src="pub_thumbnails/shapeformer_shape_prior_visible_to_amodal_transformer_based_amodal_instance_segmentation.png" ></img>
-                    <div class="pub-info">
-                        <p><strong><a href="https://arxiv.org/abs/2403.11376">Shapeformer: Shape prior visible-to-amodal transformer-based amodal instance segmentation</a></strong><br>
-                        <span class="author me">Minh Tran</span>, <span class="author">Winston Bounsavy</span>, <span class="author">Khoa Vo</span>, <span class="author">Anh Nguyen</span>, <span class="author">Tri Nguyen</span>, <span class="author">Ngan Le</span><br>
-                        <span class="conference">IJCNN &amp;middot; 2024 &amp;middot;</span><br>
-                        </p>
-                        <div class="pub-links">
-        <a href="https://arxiv.org/abs/2403.11376" class="pub-link">Paper</a>
-        <a href="https://github.com/UARK-AICV/ShapeFormer" class="pub-link">Code</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="publication">
-                    <img src="pub_thumbnails/amodal_instance_segmentation_with_diffusion_shape_prior_estimation.png" ></img>
-                    <div class="pub-info">
-                        <p><strong><a href="https://arxiv.org/abs/2409.18256">Amodal Instance Segmentation with Diffusion Shape Prior Estimation</a></strong><br>
-                        <span class="author me">Minh Tran</span>, <span class="author">Khoa Vo</span>, <span class="author">Tri Nguyen</span>, <span class="author">Ngan Le</span><br>
-                        <span class="conference">ACCV &amp;middot; 2024 &amp;middot;</span><br>
-                        </p>
-                        <div class="pub-links">
-        <a href="https://arxiv.org/abs/2409.18256" class="pub-link">Paper</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="publication">
-                    <img src="pub_thumbnails/henasy_learning_to_assemble_scene_entities_for_interpretable_egocentric_video_language_model.png" ></img>
-                    <div class="pub-info">
-                        <p><strong><a href="https://arxiv.org/abs/2406.00307">Henasy: Learning to assemble scene-entities for interpretable egocentric video-language model</a></strong><br>
-                        <span class="author">Khoa Vo</span>, <span class="author">Thinh Phan</span>, <span class="author">Kashu Yamazaki</span>, <span class="author me">Minh Tran</span>, <span class="author">Ngan Le</span><br>
-                        <span class="conference">NeurIPS &amp;middot; 2024 &amp;middot;</span><br>
-                        </p>
-                        <div class="pub-links">
-        <a href="https://arxiv.org/abs/2406.00307" class="pub-link">Paper</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="publication">
-                    <img src="pub_thumbnails/light_weight_deformable_registration_using_adversarial_learning_with_distilling_knowledge.png" ></img>
-                    <div class="pub-info">
-                        <p><strong><a href="https://arxiv.org/abs/2110.01293">Light-weight deformable registration using adversarial learning with distilling knowledge</a></strong><br>
-                        <span class="author me">Minh Tran</span>, <span class="author">Tuong Do</span>, <span class="author">Huy Tran</span>, <span class="author">Erman Tjiputra</span>, <span class="author">Quang D Tran</span>, <span class="author">Anh Nguyen</span><br>
-                        <span class="conference">TMI &amp;middot; 2022 &amp;middot;</span><br>
-                        </p>
-                        <div class="pub-links">
-        <a href="https://arxiv.org/abs/2110.01293" class="pub-link">Paper</a>
-        <a href="https://github.com/aioz-ai/LDR_ALDK" class="pub-link">Code</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="publication">
-                    <img src="pub_thumbnails/ss_3dcapsnet_self_supervised_3d_capsule_networks_for_medical_segmentation_on_less_labeled_data.png" ></img>
-                    <div class="pub-info">
-                        <p><strong><a href="https://arxiv.org/pdf/2201.05905">SS-3DCapsNet: Self-supervised 3D Capsule Networks for Medical Segmentation on Less Labeled Data</a></strong><br>
-                        <span class="author me">Minh Tran</span>, <span class="author">Loi Ly</span>, <span class="author">Binh-Son Hua</span>, <span class="author">Ngan Le</span><br>
-                        <span class="conference">ISBI &amp;middot; 2022 &amp;middot;</span><br>
-                        </p>
-                        <div class="pub-links">
-        <a href="https://arxiv.org/pdf/2201.05905" class="pub-link">Paper</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="publication">
-                    <img src="pub_thumbnails/aisformer_amodal_instance_segmentation_with_transformer.png" ></img>
-                    <div class="pub-info">
-                        <p><strong><a href="https://uark-aicv.github.io/AISFormer/">AISFormer: Amodal Instance Segmentation with Transformer</a></strong><br>
-                        <span class="author me">Minh Tran</span>, <span class="author">Khoa Vo</span>, <span class="author">Kashu Yamazaki</span>, <span class="author">Arthur Fernandes</span>, <span class="author">Michael Kidd</span>, <span class="author">Ngan Le</span><br>
-                        <span class="conference">BMCV &amp;middot; 2022 &amp;middot;</span><br>
-                        </p>
-                        <div class="pub-links">
-        <a href="https://uark-aicv.github.io/AISFormer/" class="pub-link">Project page</a>
-        <a href="https://arxiv.org/pdf/2210.06323" class="pub-link">Paper</a>
-        <a href="https://github.com/UARK-AICV/AISFormer" class="pub-link">Code</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="publication">
-                    <img src="pub_thumbnails/multiple_meta_model_quantifying_for_medical_visual_question_answering.png" ></img>
-                    <div class="pub-info">
-                        <p><strong><a href="https://arxiv.org/abs/2105.08913">Multiple meta-model quantifying for medical visual question answering</a></strong><br>
-                        <span class="author">Tuong Do</span>, <span class="author">Binh X. Nguyen</span>, <span class="author">Erman Tjiputra</span>, <span class="author me">Minh Tran</span>, <span class="author">Quang D. Tran</span>, <span class="author">Anh Nguyen</span><br>
-                        <span class="conference">MICCAI &amp;middot; 2021 &amp;middot;</span><br>
-                        </p>
-                        <div class="pub-links">
-        <a href="https://arxiv.org/abs/2105.08913" class="pub-link">Paper</a>
-                        </div>
-                    </div>
-                </div>
-
-
+        <!-- <section id="news">
+            <h2>News</h2>
+            <div class="news-container">
+                <ul class="news-list">
+                    <li>[MM/YYYY]: [News Item 1]</li>
+                    <li>[MM/YYYY]: [News Item 2]</li>
+                    <li>[MM/YYYY]: [News Item 3]</li>
+                    <li>[MM/YYYY]: [News Item 4]</li>
+                    <li>[MM/YYYY]: [News Item 5]</li>
+                    <li>[MM/YYYY]: [News Item 6]</li>
+                    <li>[MM/YYYY]: [News Item 7]</li>
+                    <li>[MM/YYYY]: [News Item 8]</li>
+                    <li>[MM/YYYY]: [News Item 9]</li>
+                    <li>[MM/YYYY]: [News Item 10]</li>
+                </ul>
             </div>
-        </div>
-        </div>
-        <hr class="section-divider">
-    </section>
+        </section> -->
 
-    <script>
-        const toggleBtn = document.getElementById('theme-toggle');
-        toggleBtn.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        });
-    </script>
+        <section id="publications">
+            <div class="publications-header">
+                <h2 id="toggle-header">Selected Publications</h2>
+                <button id="toggle-publications" class="toggle-publications">Show All</button>
+            </div>
+            <div id="publications-container">
+                <!-- Publications will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- <section id="awards"> -->
+            <!-- <h2>Awards</h2> -->
+            <!-- <div class="award-item">
+                <span class="award-year">2024</span>
+                <div class="award-desc">Fellowship</div>
+            </div> -->
+            <!-- <div class="award-item">
+                <span class="award-year">[YYYY]</span>
+                <div class="award-desc">[Award 2]</div>
+            </div>
+            <div class="award-item">
+                <span class="award-year">[YYYY]</span>
+                <div class="award-desc">[Award 3]</div>
+            </div> -->
+        <!-- </section> -->
+
+        <section id="services">
+            <h2>Services</h2>
+            <div class="service-category">
+                <div class="service-title">Reviewer</div>
+                <p>CVPR 2025, WACV 2025</p>
+            </div>
+
+            <div class="service-category">
+                <div class="service-title">Teaching Assistant</div>
+                <p>CSCE 4133: Algorithms, University of Arkansas, Fall 2023</p>
+                <p>CSCE 4613: Artificial Intelligence, University of Arkansas, Fall 2024</p>
+            </div>
+
+        </section>
+
+        <!-- <section id="miscellaneous">
+            <h2>Miscellaneous</h2>
+            <div class="misc-item">
+                <p>[Optional] Share your hobbies and interests here.</p>
+            </div>
+        </section> -->
+    </main>
+
+    <footer>
+        <p>Last updated: December 2025. Design and source code from <a href="https://cs.stanford.edu/~yuhuiz/">Yuhui Zhang's website</a>.</p>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
