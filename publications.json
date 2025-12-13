@@ -284,19 +284,6 @@
       }
     },
     {
-      "title": "aistron: Amodal Instance Segmentation Toolbox and Benchmark",
-      "authors": [
-        "Minh Tran"
-      ],
-      "venue": "2023",
-      "thumbnail": "data/thumbs/aistron.png",
-      "selected": 0,
-      "award": "",
-      "links": {
-        "code": "https://github.com/trqminh/aistron"
-      }
-    },
-    {
       "title": "DNA: Deformable Neural Articulations Network for Template-free Dynamic 3D Human Reconstruction from Monocular RGB-D Video",
       "authors": [
         "Khoa Vo",
@@ -341,7 +328,7 @@
         "Ngan Le"
       ],
       "venue": "ISBI 2022",
-      "thumbnail": "data/ss3dcapsnet.png",
+      "thumbnail": "data/thumbs/ss3dcapsnet.png",
       "selected": 1,
       "award": "",
       "links": {
@@ -356,7 +343,7 @@
         "Ngan TH Le"
       ],
       "venue": "ICPR 2022",
-      "thumbnail": "data/3dconvcaps.png",
+      "thumbnail": "data/thumbs/3dconvcaps.png",
       "selected": 0,
       "award": "",
       "links": {
@@ -375,7 +362,7 @@
         "Ngan Le"
       ],
       "venue": "BMCV 2022",
-      "thumbnail": "data/aisformer.png",
+      "thumbnail": "data/thumbs/aisformer.png",
       "selected": 1,
       "award": "",
       "links": {
@@ -395,7 +382,7 @@
         "Anh Nguyen"
       ],
       "venue": "MICCAI 2021",
-      "thumbnail": "data/meta_quant.png",
+      "thumbnail": "data/thumbs/meta_quant.png",
       "selected": 1,
       "award": "",
       "links": {
@@ -415,7 +402,7 @@
         "Quang D Tran"
       ],
       "venue": "IV 2021",
-      "thumbnail": "data/federated_learning_av.png",
+      "thumbnail": "data/thumbs/federated_learning_av.png",
       "selected": 0,
       "award": "",
       "links": {
@@ -429,11 +416,11 @@
         "Ngoc Q Ly"
       ],
       "venue": "NICS 2020",
-      "thumbnail": "data/robot_planner.png",
+      "thumbnail": "data/thumbs/robot_planner.png",
       "selected": 0,
       "award": "",
       "links": {
-        "pdf": "arxiv.org/abs/2012.11160",
+        "pdf": "https://arxiv.org/abs/2012.11160",
         "code": "https://github.com/trqminh/rl-mapless-navigation"
       }
     }
