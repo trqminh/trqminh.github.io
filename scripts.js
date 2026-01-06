@@ -1,6 +1,6 @@
 // Global variables
 let allPublications = [];
-let showingSelected = true;
+let showingSelected = false; // default to showing all
 
 // Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const toggleButton = document.getElementById('toggle-publications');
   if (toggleButton) {
     toggleButton.addEventListener('click', togglePublications);
+    updateToggleLabels();
   }
 });
 
@@ -32,7 +33,8 @@ function loadPublications() {
     .then(data => {
       console.log("Publications loaded successfully:", data);
       allPublications = data.publications;
-      renderPublications(true);
+      renderPublications(showingSelected);
+      updateToggleLabels();
     })
     .catch(error => {
       console.error('Error loading publications:', error);
@@ -51,12 +53,19 @@ function displayFallbackPublications() {
 function togglePublications() {
   showingSelected = !showingSelected;
   renderPublications(showingSelected);
-  
+  updateToggleLabels();
+}
+
+function updateToggleLabels() {
   // Update button text
   const toggleButton = document.getElementById('toggle-publications');
-  toggleButton.textContent = showingSelected ? 'Show All' : 'Show Selected';
+  if (toggleButton) {
+    toggleButton.textContent = showingSelected ? 'Show All' : 'Show Selected';
+  }
   const toggleHeader = document.getElementById('toggle-header');
-  toggleHeader.textContent = showingSelected ? 'Selected Publications' : 'All Publications';
+  if (toggleHeader) {
+    toggleHeader.textContent = showingSelected ? 'Selected Publications' : 'All Publications';
+  }
 }
 
 // Render publications based on selection state
