@@ -1,6 +1,22 @@
 {
   "publications": [
     {
+      "title": "Open-Vocab Video Amodal Completion via Diffusion Models with Text and Optical Flow Guidance",
+      "authors": [
+        "Minh Tran",
+        "Winston Bounsavy",
+        "Ngan Le"
+      ],
+      "venue": "Preprint 2026",
+      "thumbnail": "data/thumbs/lancof.png",
+      "selected": 1,
+      "award": "",
+      "links": {
+        "pdf": "https://trqminh.github.io/data/lancof.pdf",
+        "project": "https://lancof.github.io/"
+      }
+    },
+    {
       "title": "S3Former: A Deep Learning Approach to High Resolution Solar PV Profiling",
       "authors": [
         "Minh Tran",
@@ -189,7 +205,8 @@
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/pdf/2310.03923",
-        "code": "https://github.com/UARK-AICV/OpenFusion"
+        "code": "https://github.com/UARK-AICV/OpenFusion",
+        "project": "https://uark-aicv.github.io/OpenFusion"
       }
     },
     {
@@ -211,7 +228,8 @@
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/pdf/2306.06842",
-        "code": "https://github.com/UARK-AICV/AerialFormer"
+        "code": "https://github.com/UARK-AICV/AerialFormer",
+        "project": "https://uark-aicv.github.io/AerialFormer/"
       }
     },
     {
@@ -263,7 +281,8 @@
       "selected": 1,
       "award": "",
       "links": {
-        "pdf": "https://arxiv.org/abs/2409.18256"
+        "pdf": "https://arxiv.org/abs/2409.18256",
+        "project": "https://uark-aicv.github.io/AISDiff/"
       }
     },
     {
