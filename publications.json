@@ -13,7 +13,7 @@
       "group": "Amodal Perception",
       "award": "",
       "links": {
-        "pdf": "https://trqminh.github.io/data/lancof.pdf",
+        "pdf": "./data/lancof.pdf",
         "project": "https://uark-aicv.github.io/LANCOF/"
       }
     },
@@ -399,7 +399,7 @@
         "Michael Kidd",
         "Ngan Le"
       ],
-      "venue": "British Machine Vision Conference (BMCV), 2022",
+      "venue": "British Machine Vision Conference (BMVC), 2022",
       "thumbnail": "data/thumbs/aisformer.png",
       "selected": 1,
       "group": "Amodal Perception",
