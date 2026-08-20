@@ -14,6 +14,30 @@
     <title>Minh Tran</title>
     <link rel="icon" href="data/icon.png">
     <link rel="stylesheet" href="styles.css">
+    <script>
+        (function() {
+            if (localStorage.getItem('theme') !== 'light')
+                document.documentElement.setAttribute('data-theme', 'dark');
+        })();
+        function toggleTheme() {
+            var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+            var btn = document.querySelector('.theme-toggle');
+            if (btn) btn.textContent = isDark ? 'dark' : 'light';
+        }
+        function revealEmail(el) {
+            el.textContent = 'minht[at]uark[dot]edu';
+            el.removeAttribute('href');
+            el.onclick = null;
+            el.style.cursor = 'default';
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -21,8 +45,9 @@
             <ul>
                 <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="publications.html">Research</a></li>
-                <li><a href="random/random.html">Misc</a></li>
+                <!-- <li><a href="random/random.html">Misc</a></li> -->
             </ul>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode"><script>document.write(localStorage.getItem('theme')==='light'?'dark':'light')</script></button>
         </nav>
     </header>
 
@@ -42,12 +67,12 @@
                     <a href="https://scholar.google.com/citations?user=AmQwXDUAAAAJ">Google Scholar</a>
                     <a href="https://www.linkedin.com/in/minh-tran-a10b8b176/">LinkedIn</a>
                     <a href="https://github.com/trqminh">GitHub</a>
+                    <a href="#" class="email-reveal" onclick="revealEmail(this); return false;">Email</a>
                 </div>
             </div>
 
             <div class="profile">
                 <img src="data/profile.jpg" alt="Minh Tran">
-                <p><a href="mailto:minht@uark.edu">minht[at]uark[dot]edu</a></p>
             </div>
         </section>
 
