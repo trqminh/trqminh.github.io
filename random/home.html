@@ -1,58 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back Home December 2024 - Minh Tran</title>
+    <link rel="icon" href="../data/icon.png">
+    <link rel="stylesheet" href="../styles.css">
+    <script>
+        (function() {
+            if (localStorage.getItem('theme') !== 'light')
+                document.documentElement.setAttribute('data-theme', 'dark');
+        })();
+        function toggleTheme() {
+            var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+            var btn = document.querySelector('.theme-toggle');
+            if (btn) btn.textContent = isDark ? 'dark' : 'light';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav aria-label="Primary navigation">
+            <ul>
+                <li><a href="../index.html">home</a></li>
+                <li><a href="../publications.html">research</a></li>
+                <li><a href="random.html" aria-current="page">random</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode"><script>document.write(localStorage.getItem('theme')==='light'?'dark':'light')</script></button>
+        </nav>
+    </header>
 
-<title> Back home December 2024
- </title>
+    <main>
+        <h1>Back Home December 2024</h1>
 
-<BODY bgcolor="#FFFFEE"><P>
-<a href="../index.html">&larr; Home</a>
+        <div class="photo-grid">
+            <a href="home/IMG_2822.png"><img src="home/IMG_2822.png" width="200" height="130" alt=""></a>
+            <a href="home/IMG_2843.png"><img src="home/IMG_2843.png" width="200" height="130" alt=""></a>
+            <a href="home/IMG_2839.png"><img src="home/IMG_2839.png" width="200" height="130" alt=""></a>
+            <a href="home/IMG_2852.png"><img src="home/IMG_2852.png" width="200" height="130" alt=""></a>
+        </div>
 
-<center>
+        <div class="photo-grid">
+            <!-- <a href="home/IMG_2891.png"><img src="home/IMG_2891.png" width="200" height="130" alt=""></a> -->
+            <a href="home/IMG_2846.png"><img src="home/IMG_2846.png" width="200" height="130" alt=""></a>
+            <a href="home/IMG_2855.png"><img src="home/IMG_2855.png" width="200" height="130" alt=""></a>
+            <a href="home/IMG_2880.png"><img src="home/IMG_2880.png" width="200" height="130" alt=""></a>
+            <a href="home/IMG_2871.png"><img src="home/IMG_2871.png" width="200" height="130" alt=""></a>
+        </div>
 
-<h4>
-Back home December 2024
-</h4>
+        <div class="photo-grid">
+            <a href="home/IMG_2815.png"><img src="home/IMG_2815.png" width="180" height="260" alt=""></a>
+            <a href="home/IMG_2816.png"><img src="home/IMG_2816.png" width="180" height="260" alt=""></a>
+            <a href="home/IMG_2828.png"><img src="home/IMG_2828.png" width="180" height="260" alt=""></a>
+            <a href="home/IMG_2830.png"><img src="home/IMG_2830.png" width="180" height="260" alt=""></a>
+            <a href="home/IMG_2844.png"><img src="home/IMG_2844.png" width="180" height="260" alt=""></a>
+            <a href="home/A.jpg"><img src="home/A.jpg" width="180" height="260" alt=""></a>
+            <!-- <a href="home/B.jpg"><img src="home/B.jpg" width="180" height="260" alt=""></a> -->
+        </div>
 
-<table cellspacing=0 cellpadding=0 border=0>
-
-<tr align=center>
-<td  align=center>
- <a href="./home/IMG_2822.png"> <img src="./home/IMG_2822.png" width =200 height =130></a>
- <a href="./home/IMG_2839.png"> <img src="./home/IMG_2839.png" width =200 height =130></a>
- <a href="./home/IMG_2843.png"> <img src="./home/IMG_2843.png" width =200 height =130></a>
- <a href="./home/IMG_2852.png"> <img src="./home/IMG_2852.png" width =200 height =130></a>
-</td>
-</tr>
-
-<tr>
-<td  align=center>
- <a href="home/IMG_2891.png"> <img src="./home/IMG_2891.png" width =200 height =130></a>
- <a href="home/IMG_2846.png"> <img src="home/IMG_2846.png" width =200 height =130></a> 
- <a href="home/IMG_2855.png"> <img src="home/IMG_2855.png" width =200 height =130></a>
-</td>
-</tr>
-
-<tr>
-<td  align=center>
- <a href="home/IMG_2815.png"> <img src="home/IMG_2815.png" width =180 height =260></a> 
- <a href="home/IMG_2816.png"> <img src="home/IMG_2816.png" width =180 height =260></a>
- <a href="home/IMG_2828.png"> <img src="home/IMG_2828.png" width =180 height =260></a>
- <a href="home/IMG_2830.png"> <img src="home/IMG_2830.png" width =180 height =260></a>
- <a href="home/IMG_2844.png"> <img src="home/IMG_2844.png" width =180 height =260></a>
- <a href="home/A.jpg"> <img src="home/A.jpg" width =180 height =260></a>
- <a href="home/B.jpg"> <img src="home/B.jpg" width =180 height =260></a>
-</td>
-</tr>
-
-<tr>
-<td  align=center>
- <a href="home/IMG_2880.png"> <img src="home/IMG_2880.png" width =200 height =130></a> 
- <a href="home/IMG_2871.png"> <img src="home/IMG_2871.png" width =200 height =130></a>
-</td>
-</tr>
-
-
-</table>
-</center>
-
-<p>
-<p>
-
+    </main>
+</body>
+</html>

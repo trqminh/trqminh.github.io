@@ -319,6 +319,18 @@ nav a[aria-current="page"] {
     }
 }
 
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin: 1em 0;
+}
+
+.photo-grid a img {
+    display: block;
+    border: 1px solid var(--border-color);
+}
+
 @media (max-width: 440px) {
     .publication-entry,
     [data-layout="blog"] .publication-entry {
