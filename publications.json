@@ -1,19 +1,20 @@
 {
   "publications": [
     {
-      "title": "Open-Vocab Video Amodal Completion via Diffusion Models with Text and Optical Flow Guidance",
+      "title": "REVEAL: Reconstructing Video Amodal Content via Language and Flow Guidance",
       "authors": [
         "Minh Tran",
         "Winston Bounsavy",
         "Ngan Le"
       ],
-      "venue": "Preprint 2026",
+      "venue": "Preprint, 2026",
       "thumbnail": "data/thumbs/lancof.png",
       "selected": 1,
+      "group": "Amodal Perception",
       "award": "",
       "links": {
         "pdf": "https://trqminh.github.io/data/lancof.pdf",
-        "project": "https://lancof.github.io/"
+        "project": "https://uark-aicv.github.io/LANCOF/"
       }
     },
     {
@@ -28,9 +29,10 @@
         "Jack Cothren",
         "Ngan Le"
       ],
-      "venue": "TSG 2025",
+      "venue": "IEEE Transactions on Smart Grid (TSG), 2025",
       "thumbnail": "data/thumbs/s3former.png",
       "selected": 0,
+      "group": "AI for Energy & Environment",
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/abs/2405.04489"
@@ -54,9 +56,10 @@
         "Alan Mantooth",
         "Ngan Le"
       ],
-      "venue": "TIA 2025",
+      "venue": "IEEE Transactions on Industry Applications (TIA), 2025",
       "thumbnail": "data/thumbs/solarformerpp.png",
       "selected": 0,
+      "group": "AI for Energy & Environment",
       "award": "",
       "links": {
         "pdf": "https://ieeexplore.ieee.org/abstract/document/11017409",
@@ -72,9 +75,10 @@
         "Tri Nguyen",
         "Ngan Le"
       ],
-      "venue": "IMAVIS 2025",
+      "venue": "Image and Vision Computing (IMAVIS), 2025",
       "thumbnail": "data/thumbs/a2vis.png",
       "selected": 1,
+      "group": "Amodal Perception",
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/pdf/2412.01147",
@@ -93,9 +97,10 @@
         "Sandra Eksioglu",
         "Ngan Le"
       ],
-      "venue": "RS 2025",
+      "venue": "Remote Sensing (RS), 2025",
       "thumbnail": "data/thumbs/land8fire.png",
       "selected": 0,
+      "group": "AI for Energy & Environment",
       "award": "",
       "links": {
         "pdf": "https://www.mdpi.com/2072-4292/17/16/2776",
@@ -122,10 +127,11 @@
         "Hien Nguyen",
         "Ngan Le"
       ],
-      "venue": "ICCV 2025",
+      "venue": "IEEE/CVF International Conference on Computer Vision (ICCV), 2025",
       "thumbnail": "data/thumbs/ct_scangaze.png",
-      "selected": 1,
-      "award": "",
+      "selected": 0,
+      "group": "Medical Imaging",
+      "award": "Highlight paper",
       "links": {
         "pdf": "https://arxiv.org/abs/2507.12591",
         "code": "https://github.com/UARK-AICV/CTScanGaze"
@@ -140,9 +146,10 @@
         "Tri Nguyen",
         "Ngan Le"
       ],
-      "venue": "ICCV 2025",
+      "venue": "IEEE/CVF International Conference on Computer Vision, Retail Vision Workshop (ICCV Workshop), 2025",
       "thumbnail": "data/thumbs/dualfit.png",
-      "selected": 1,
+      "selected": 0,
+      "group": "Virtual Try-On",
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/abs/2508.12131"
@@ -158,9 +165,10 @@
         "Khoa Luu",
         "Ngan Le"
       ],
-      "venue": "DLMIA 2024",
+      "venue": "Deep Learning for Medical Image Analysis (DLMIA), 2024",
       "thumbnail": "data/thumbs/capsnetbook.png",
       "selected": 0,
+      "group": "Medical Imaging",
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/abs/2203.08948"
@@ -179,9 +187,10 @@
         "Ying Huang",
         "Ngan Le"
       ],
-      "venue": "SGSMA 2024",
+      "venue": "International Conference on Smart Grid Synchronized Measurements and Analytics (SGSMA), 2024",
       "thumbnail": "data/thumbs/solarformer.png",
       "selected": 0,
+      "group": "AI for Energy & Environment",
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/abs/2310.20057"
@@ -199,9 +208,10 @@
         "Anh Nguyen",
         "Ngan Le"
       ],
-      "venue": "ICRA 2024",
+      "venue": "IEEE International Conference on Robotics and Automation (ICRA), 2024",
       "thumbnail": "data/thumbs/open_fusion.png",
-      "selected": 1,
+      "selected": 0,
+      "group": "Robotics & 3D Vision",
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/pdf/2310.03923",
@@ -222,9 +232,10 @@
         "Jackson Cothren",
         "Ngan Le"
       ],
-      "venue": "RS 2024",
+      "venue": "Remote Sensing (RS), 2024",
       "thumbnail": "data/thumbs/aerialformer.png",
       "selected": 0,
+      "group": "AI for Energy & Environment",
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/pdf/2306.06842",
@@ -242,9 +253,10 @@
         "Tri Nguyen",
         "Ngan Le"
       ],
-      "venue": "IJCNN 2024",
+      "venue": "International Joint Conference on Neural Networks (IJCNN), 2024",
       "thumbnail": "data/thumbs/shapeformer.png",
-      "selected": 1,
+      "selected": 0,
+      "group": "Amodal Perception",
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/abs/2403.11376",
@@ -260,9 +272,10 @@
         "Michael T Kidd",
         "Ngan Le"
       ],
-      "venue": "PS 2024",
+      "venue": "Poultry Science (PS), 2024",
       "thumbnail": "data/thumbs/carcassformer.png",
       "selected": 0,
+      "group": "AI for Energy & Environment",
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/abs/2404.11429"
@@ -276,9 +289,10 @@
         "Tri Nguyen",
         "Ngan Le"
       ],
-      "venue": "ACCV 2024",
+      "venue": "Asian Conference on Computer Vision (ACCV), 2024",
       "thumbnail": "data/thumbs/diff_sp.png",
       "selected": 1,
+      "group": "Amodal Perception",
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/abs/2409.18256",
@@ -294,9 +308,10 @@
         "Minh Tran",
         "Ngan Le"
       ],
-      "venue": "NeurIPS 2024",
+      "venue": "Advances in Neural Information Processing Systems (NeurIPS), 2024",
       "thumbnail": "data/thumbs/henasy.png",
       "selected": 1,
+      "group": "Video & Language",
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/abs/2406.00307"
@@ -311,9 +326,10 @@
         "Minh Tran",
         "Ngan Le"
       ],
-      "venue": "CVPR 2023",
+      "venue": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2023",
       "thumbnail": "data/thumbs/dna.png",
       "selected": 0,
+      "group": "Robotics & 3D Vision",
       "award": "",
       "links": {
         "pdf": "https://openaccess.thecvf.com/content/CVPR2023W/Precognition/papers/Vo_DNA_Deformable_Neural_Articulations_Network_for_Template-Free_Dynamic_3D_Human_CVPRW_2023_paper.pdf"
@@ -329,9 +345,10 @@
         "Quang D Tran",
         "Anh Nguyen"
       ],
-      "venue": "TMI 2022",
+      "venue": "IEEE Transactions on Medical Imaging (TMI), 2022",
       "thumbnail": "data/thumbs/ldr_aldk.png",
-      "selected": 1,
+      "selected": 0,
+      "group": "Medical Imaging",
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/abs/2110.01293",
@@ -346,10 +363,11 @@
         "Binh-Son Hua",
         "Ngan Le"
       ],
-      "venue": "ISBI 2022",
+      "venue": "IEEE International Symposium on Biomedical Imaging (ISBI), 2022",
       "thumbnail": "data/thumbs/ss3dcapsnet.png",
-      "selected": 1,
-      "award": "",
+      "selected": 0,
+      "group": "Medical Imaging",
+      "award": "Oral Presentation",
       "links": {
         "pdf": "https://arxiv.org/pdf/2201.05905"
       }
@@ -361,9 +379,10 @@
         "Viet-Khoa Vo-Ho",
         "Ngan TH Le"
       ],
-      "venue": "ICPR 2022",
+      "venue": "International Conference on Pattern Recognition (ICPR), 2022",
       "thumbnail": "data/thumbs/3dconvcaps.png",
       "selected": 0,
+      "group": "Medical Imaging",
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/abs/2205.09299",
@@ -380,9 +399,10 @@
         "Michael Kidd",
         "Ngan Le"
       ],
-      "venue": "BMCV 2022",
+      "venue": "British Machine Vision Conference (BMCV), 2022",
       "thumbnail": "data/thumbs/aisformer.png",
       "selected": 1,
+      "group": "Amodal Perception",
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/pdf/2210.06323",
@@ -400,9 +420,10 @@
         "Quang D. Tran",
         "Anh Nguyen"
       ],
-      "venue": "MICCAI 2021",
+      "venue": "Medical Image Computing and Computer Assisted Intervention (MICCAI), 2021",
       "thumbnail": "data/thumbs/meta_quant.png",
-      "selected": 1,
+      "selected": 0,
+      "group": "Medical Imaging",
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/abs/2105.08913"
@@ -420,9 +441,10 @@
         "Erman Tjiputra",
         "Quang D Tran"
       ],
-      "venue": "IV 2021",
+      "venue": "IEEE Intelligent Vehicles Symposium (IV), 2021",
       "thumbnail": "data/thumbs/federated_learning_av.png",
       "selected": 0,
+      "group": "Robotics & 3D Vision",
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/abs/2110.05754"
@@ -434,9 +456,10 @@
         "Minh Tran",
         "Ngoc Q Ly"
       ],
-      "venue": "NICS 2020",
+      "venue": "NAFOSTED Conference on Information and Computer Science (NICS), 2020",
       "thumbnail": "data/thumbs/robot_planner.png",
       "selected": 0,
+      "group": "Robotics & 3D Vision",
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/abs/2012.11160",

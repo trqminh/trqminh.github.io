@@ -3,134 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Minh Tran">
-    <meta name="keywords" content="Computer Science, PhD Student, Research, Computer Vision">
-    <meta name="author" content="Anonymous">
-    <meta property="og:title" content="Minh Tran - PhD Student">
-    <meta property="og:description" content="Research in computer vision">
+    <meta name="description" content="Minh Tran, a Computer Science PhD student researching computer vision and deep learning.">
+    <meta name="keywords" content="Minh Tran, Computer Science, PhD Student, Research, Computer Vision">
+    <meta name="author" content="Minh Tran">
+    <meta property="og:title" content="Minh Tran">
+    <meta property="og:description" content="Computer vision and deep learning research by Minh Tran.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="#">
+    <meta property="og:url" content="https://trqminh.github.io/">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:creator" content="@anonymous">
     <title>Minh Tran</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="data/icon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body id="top">
+<body>
     <header>
-        <div class="header-content">
-            <h1>Minh Tran</h1>
-            <p>CS PhD Student • University of Arkansas</p>
-            <div class="social-links-header">
-                <a href="https://scholar.google.com/citations?user=AmQwXDUAAAAJ"><i class="fas fa-graduation-cap"></i>Google Scholar</a>
-                <a href="https://x.com/minhtrann"><i class="fab fa-twitter"></i>Twitter</a>
-                <a href="https://www.linkedin.com/in/minh-tran-a10b8b176/"><i class="fab fa-linkedin"></i>LinkedIn</a>
-                <a href="https://github.com/trqminh"><i class="fab fa-github"></i>GitHub</a>
-                <a href="mailto:minht@uark.edu"><i class="fas fa-envelope"></i>Email</a>
-            </div>
-        </div>
-        <div class="header-image">
-            <img src="data/profile.jpg" alt="Profile Photo">
-        </div>
+        <nav aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="publications.html">Research</a></li>
+                <li><a href="random/random.html">Misc</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section id="about">
-            <p>
-            I am a Ph.D. student in Computer Science at the University of Arkansas, advised by <a href="https://scholar.google.com/citations?user=8ck0k_UAAAAJ&hl=en">Ngan Le</a>. Before starting my Ph.D., I was a research assistant at <a href="https://aioz.network/">AIOZ AI</a>, advised by <a href="https://scholar.google.com/citations?user=qCcSKkMAAAAJ&hl=en">Tuong Do</a> and <a href="https://scholar.google.com/citations?user=gEbaF0sAAAAJ&hl=en">Anh Nguyen</a>.
-            </p>
-            <p>
-                My research focuses on deep learning algorithms for computer vision, spanning perception tasks (detection, segmentation, and tracking) as well as generative tasks (completion and inpainting). My work involves perception frameworks, transformers, attention mechanisms, diffusion and flow-matching models, and self-supervised learning for low-label settings.
-            </p>
+        <section class="about">
+            <div class="bio">
+                <h1>Minh Tran</h1>
+
+                <p>
+                    I am a Ph.D. student in Computer Science at the University of Arkansas, advised by <a href="https://scholar.google.com/citations?user=8ck0k_UAAAAJ&amp;hl=en">Ngan Le</a>. I also completed an AI research internship with the Ultrasound R&D Team at <a href="https://usa.united-imaging.com/">United Imaging Healthcare</a>.
+                </p>
+                <p>
+                    Before starting my Ph.D., I was a research assistant at <a href="https://aioz.network/">AIOZ AI</a>, advised by <a href="https://scholar.google.com/citations?user=qCcSKkMAAAAJ&amp;hl=en">Tuong Do</a> and <a href="https://scholar.google.com/citations?user=gEbaF0sAAAAJ&amp;hl=en">Anh Nguyen</a>. I obtained my B.Sc. in Computer Science from VNU-HCM University of Science.
+                </p>
+
+                <div class="contact-links" aria-label="Professional links">
+                    <a href="https://scholar.google.com/citations?user=AmQwXDUAAAAJ">Google Scholar</a>
+                    <a href="https://www.linkedin.com/in/minh-tran-a10b8b176/">LinkedIn</a>
+                    <a href="https://github.com/trqminh">GitHub</a>
+                </div>
+            </div>
+
+            <div class="profile">
+                <img src="data/profile.jpg" alt="Minh Tran">
+                <p><a href="mailto:minht@uark.edu">minht[at]uark[dot]edu</a></p>
+            </div>
         </section>
 
-        <!-- <section id="research">
+        <section class="publications">
             <h2>Research</h2>
-            <p>My research focuses on <strong>[topics]</strong>. My recent works explore:</p>
-            <ul>
-                <li>[Research Topic 1] (<a href="#">[Conference 1]'24</a>, <a href="#">[Conference 2]'23</a>, <a href="#">[Conference 3]'22</a>)</li>
-                <li>[Research Topic 2] (<a href="#">[Conference 4]'24</a>, <a href="#">[Conference 5]'23</a>, <a href="#">[Conference 6]'23</a>)</li>
-                <li>[Research Topic 3] (<a href="#">[Conference 7]'24</a>, <a href="#">[Conference 8]'23</a>, <a href="#">[Conference 9]'23</a>)</li>
-                <li>[Research Topic 4] (<a href="#">[Journal 1]'22</a>, <a href="#">[Journal 2]'21</a>)</li>
-            </ul>
-        </section> -->
-
-        <!-- <section id="news">
-            <h2>News</h2>
-            <div class="news-container">
-                <ul class="news-list">
-                    <li>[MM/YYYY]: [News Item 1]</li>
-                    <li>[MM/YYYY]: [News Item 2]</li>
-                    <li>[MM/YYYY]: [News Item 3]</li>
-                    <li>[MM/YYYY]: [News Item 4]</li>
-                    <li>[MM/YYYY]: [News Item 5]</li>
-                    <li>[MM/YYYY]: [News Item 6]</li>
-                    <li>[MM/YYYY]: [News Item 7]</li>
-                    <li>[MM/YYYY]: [News Item 8]</li>
-                    <li>[MM/YYYY]: [News Item 9]</li>
-                    <li>[MM/YYYY]: [News Item 10]</li>
-                </ul>
+            <p>My Ph.D. research focuses on algorithms for <b>visual amodal perception</b>, which enables vision models to infer and understand parts of the visual world that are not directly visible. Moving forward, I'm interested in exploring its role in spatial intelligence, world models, and robotics, particularly in enabling AI systems to reason about hidden scene structure, understand physical environments, and act effectively under partial observation.</p>
+            <div
+                id="publications"
+                data-publications
+                data-filter="selected"
+                data-layout="compact"
+                aria-live="polite"
+            >
+                <p class="publication-status">Loading publications...</p>
             </div>
-        </section> -->
-
-        <section id="publications">
-            <div class="publications-header">
-                <h2 id="toggle-header">Selected Publications</h2>
-                <button id="toggle-publications" class="toggle-publications">Show All</button>
-            </div>
-            <div id="publications-container">
-                <!-- Publications will be dynamically loaded here -->
-            </div>
+            <p class="see-all-link"><a href="publications.html">See all publications →</a></p>
         </section>
-
-        <!-- <section id="awards"> -->
-            <!-- <h2>Awards</h2> -->
-            <!-- <div class="award-item">
-                <span class="award-year">2024</span>
-                <div class="award-desc">Fellowship</div>
-            </div> -->
-            <!-- <div class="award-item">
-                <span class="award-year">[YYYY]</span>
-                <div class="award-desc">[Award 2]</div>
-            </div>
-            <div class="award-item">
-                <span class="award-year">[YYYY]</span>
-                <div class="award-desc">[Award 3]</div>
-            </div> -->
-        <!-- </section> -->
-
-        <section id="services">
-            <h2>Services</h2>
-            <div class="service-category">
-                <div class="service-title">Reviewer</div>
-                <p>CVPR 2025, WACV 2025</p>
-            </div>
-
-            <div class="service-category">
-                <div class="service-title">Teaching Assistant</div>
-                <p>CSCE 4133: Algorithms, University of Arkansas, Fall 2023</p>
-                <p>CSCE 4613: Artificial Intelligence, University of Arkansas, Fall 2024</p>
-            </div>
-
-        </section>
-
-        <!-- <section id="miscellaneous">
-            <h2>Miscellaneous</h2>
-            <div class="misc-item">
-                <p>[Optional] Share your hobbies and interests here.</p>
-            </div>
-        </section> -->
     </main>
 
-    <footer>
-        <p>Last updated: December 2025. Design and source code from <a href="https://cs.stanford.edu/~yuhuiz/">Yuhui Zhang's website</a>.</p>
-    </footer>
-
-    <div id="imageModal" class="modal">
-        <span class="modal-close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImage">
-    </div>
     <script src="scripts.js"></script>
 </body>
 </html>

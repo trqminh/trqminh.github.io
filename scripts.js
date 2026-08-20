@@ -1,219 +1,203 @@
-// Global variables
-let allPublications = [];
-let showingSelected = false; // default to showing all
+document.addEventListener('DOMContentLoaded', loadPublications);
 
-// Initialize the page
-document.addEventListener('DOMContentLoaded', function() {
-  // Load publications data
-  loadPublications();
-  
-  // Initialize animation delays for sections
-  const sections = document.querySelectorAll('section');
-  sections.forEach((section, index) => {
-    section.style.animationDelay = `${index * 0.1}s`;
-  });
-  
-  // Add event listener for toggle button
-  const toggleButton = document.getElementById('toggle-publications');
-  if (toggleButton) {
-    toggleButton.addEventListener('click', togglePublications);
-    updateToggleLabels();
-  }
-});
+async function loadPublications() {
+    const container = document.querySelector('[data-publications]');
+    if (!container) return;
 
-// Load publications from JSON file
-function loadPublications() {
-  fetch('publications.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Network response was not ok: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then(data => {
-      console.log("Publications loaded successfully:", data);
-      allPublications = data.publications;
-      renderPublications(showingSelected);
-      updateToggleLabels();
-    })
-    .catch(error => {
-      console.error('Error loading publications:', error);
-      // Create fallback publications display if JSON loading fails
-      displayFallbackPublications();
-    });
+    try {
+        const source = container.dataset.source || 'publications.json';
+        const response = await fetch(source);
+
+        if (!response.ok) {
+            throw new Error(`Publication request failed with status ${response.status}`);
+        }
+
+        const data = await response.json();
+        if (!Array.isArray(data.publications)) {
+            throw new Error('Publication data is not an array');
+        }
+
+        const publications = container.dataset.filter === 'selected'
+            ? data.publications.filter((publication) => publication.selected === 1)
+            : data.publications;
+
+        renderPublications(container, publications);
+    } catch (error) {
+        console.error('Failed to load publications:', error);
+        container.replaceChildren(createStatus('Unable to load publications.', 'publication-error'));
+    }
 }
 
-// Fallback if JSON loading fails
-function displayFallbackPublications() {
-  const container = document.getElementById('publications-container');
-  container.innerHTML = `Error loading publications.`;
-}
+function renderPublications(container, publications) {
+    if (publications.length === 0) {
+        container.replaceChildren(createStatus('No publications found.', 'publication-status'));
+        return;
+    }
 
-// Toggle between showing all or selected publications
-function togglePublications() {
-  showingSelected = !showingSelected;
-  renderPublications(showingSelected);
-  updateToggleLabels();
-}
+    const fragment = document.createDocumentFragment();
 
-function updateToggleLabels() {
-  // Update button text
-  const toggleButton = document.getElementById('toggle-publications');
-  if (toggleButton) {
-    toggleButton.textContent = showingSelected ? 'Show All' : 'Show Selected';
-  }
-  const toggleHeader = document.getElementById('toggle-header');
-  if (toggleHeader) {
-    toggleHeader.textContent = showingSelected ? 'Selected Publications' : 'All Publications';
-  }
-}
-
-// Render publications based on selection state
-function renderPublications(selectedOnly) {
-  const publicationsContainer = document.getElementById('publications-container');
-  publicationsContainer.innerHTML = '';
-  
-  const pubsToShow = selectedOnly ? 
-    allPublications.filter(pub => pub.selected === 1) : 
-    allPublications;
-  
-  pubsToShow.forEach(publication => {
-    const pubElement = createPublicationElement(publication);
-    publicationsContainer.appendChild(pubElement);
-  });
-}
-
-// Create HTML element for a publication
-function createPublicationElement(publication) {
-  const pubItem = document.createElement('div');
-  pubItem.className = 'publication-item';
-  
-  // Create thumbnail
-  const thumbnail = document.createElement('div');
-  thumbnail.className = 'pub-thumbnail';
-  thumbnail.onclick = () => openModal(publication.thumbnail);
-  
-  const thumbnailImg = document.createElement('img');
-  thumbnailImg.src = publication.thumbnail;
-  thumbnailImg.alt = `${publication.title} thumbnail`;
-  thumbnail.appendChild(thumbnailImg);
-  
-  // Create content container
-  const content = document.createElement('div');
-  content.className = 'pub-content';
-  
-  // Add title
-  const title = document.createElement('div');
-  title.className = 'pub-title';
-  title.textContent = publication.title;
-  content.appendChild(title);
-  
-  // Add authors with highlight
-  const authors = document.createElement('div');
-  authors.className = 'pub-authors';
-  
-  // Format authors with highlighting
-  let authorsHTML = '';
-  publication.authors.forEach((author, index) => {
-    if (author.includes('Minh Tran')) { // highlight specific author
-      authorsHTML += `<span class="highlight-name">${author}</span>`;
+    if (container.dataset.group === 'true') {
+        groupPublications(publications).forEach(([group, entries]) => {
+            fragment.appendChild(createGroupHeading(group));
+            entries.forEach((publication) => {
+                fragment.appendChild(createPublication(publication));
+            });
+        });
     } else {
-      authorsHTML += author;
+        publications.forEach((publication) => {
+            fragment.appendChild(createPublication(publication));
+        });
     }
 
-    if (index < publication.authors.length - 1) {
-      authorsHTML += ', ';
-    }
-  });
-  
-  authors.innerHTML = authorsHTML;
-  content.appendChild(authors);
-  
-  // Add venue with award if present
-  const venueContainer = document.createElement('div');
-  venueContainer.className = 'pub-venue-container';
-  
-  const venue = document.createElement('div');
-  venue.className = 'pub-venue';
-  venue.textContent = publication.venue;
-  venueContainer.appendChild(venue);
-  
-  // Add award if it exists
-  if (publication.award && publication.award.length > 0) {
-    const award = document.createElement('div');
-    award.className = 'pub-award';
-    award.textContent = publication.award;
-    venueContainer.appendChild(award);
-  }
-  
-  content.appendChild(venueContainer);
-  
-  // Add links if they exist
-  if (publication.links) {
-    const links = document.createElement('div');
-    links.className = 'pub-links';
-    
-    if (publication.links.pdf) {
-      const pdfLink = document.createElement('a');
-      pdfLink.href = publication.links.pdf;
-      pdfLink.textContent = '[PDF]';
-      links.appendChild(pdfLink);
-    }
-    
-    if (publication.links.code) {
-      const codeLink = document.createElement('a');
-      codeLink.href = publication.links.code;
-      codeLink.textContent = '[Code]';
-      links.appendChild(codeLink);
-    }
-    
-    if (publication.links.project) {
-      const projectLink = document.createElement('a');
-      projectLink.href = publication.links.project;
-      projectLink.textContent = '[Project Page]';
-      links.appendChild(projectLink);
-    }
-    
-    if (publication.links.demo) {
-      const demoLink = document.createElement('a');
-      demoLink.href = publication.links.demo;
-      demoLink.textContent = '[Demo]';
-      links.appendChild(demoLink);
-    }
-
-    content.appendChild(links);
-  }
-  
-  // Assemble the publication item
-  pubItem.appendChild(thumbnail);
-  pubItem.appendChild(content);
-  
-  return pubItem;
+    container.replaceChildren(fragment);
 }
 
-// Modal functionality for viewing original images
-function openModal(imageSrc) {
-  const modal = document.getElementById('imageModal');
-  const modalImg = document.getElementById('modalImage');
-  modal.style.display = "block";
-  setTimeout(() => {
-    modal.classList.add('show');
-  }, 10);
-  modalImg.src = imageSrc;
+function groupPublications(publications) {
+    const groups = new Map();
+
+    publications.forEach((publication) => {
+        const name = publication.group || 'Other';
+        if (!groups.has(name)) groups.set(name, []);
+        groups.get(name).push(publication);
+    });
+
+    return [...groups];
 }
 
-function closeModal() {
-  const modal = document.getElementById('imageModal');
-  modal.classList.remove('show');
-  setTimeout(() => {
-    modal.style.display = "none";
-  }, 300);
+function createGroupHeading(name) {
+    const heading = document.createElement('h2');
+    heading.className = 'publication-group';
+    heading.textContent = name;
+    return heading;
 }
 
-// Close modal when clicking outside the image
-window.onclick = function(event) {
-  const modal = document.getElementById('imageModal');
-  if (event.target == modal) {
-    closeModal();
-  }
+function createPublication(publication) {
+    const entry = document.createElement('article');
+    entry.className = 'publication-entry';
+
+    if (publication.thumbnail) {
+        const thumbnail = document.createElement('img');
+        thumbnail.className = 'publication-thumbnail';
+        thumbnail.src = publication.thumbnail;
+        thumbnail.alt = `${publication.title || 'Publication'} preview`;
+        thumbnail.loading = 'lazy';
+        thumbnail.addEventListener('click', () => openLightbox(publication.thumbnail, publication.title));
+        entry.appendChild(thumbnail);
+    }
+
+    const content = document.createElement('div');
+    content.className = 'publication-content';
+
+    const title = document.createElement('strong');
+    title.className = 'publication-title';
+    title.textContent = publication.title || 'Untitled publication';
+    content.appendChild(title);
+
+    if (Array.isArray(publication.authors) && publication.authors.length > 0) {
+        content.appendChild(createAuthors(publication.authors));
+    }
+
+    if (publication.venue || publication.award) {
+        const venue = document.createElement('p');
+        venue.className = 'publication-venue';
+
+        if (publication.venue) {
+            venue.appendChild(document.createTextNode(publication.venue));
+        }
+
+        if (publication.award) {
+            if (publication.venue) venue.appendChild(document.createTextNode(' — '));
+            const award = document.createElement('span');
+            award.className = 'publication-award';
+            award.textContent = publication.award;
+            venue.appendChild(award);
+        }
+
+        content.appendChild(venue);
+    }
+
+    const links = createLinks(publication.links);
+    if (links) content.appendChild(links);
+
+    entry.appendChild(content);
+    return entry;
+}
+
+function createAuthors(authors) {
+    const authorLine = document.createElement('p');
+    authorLine.className = 'publication-authors';
+
+    authors.forEach((author, index) => {
+        const authorNode = document.createElement(author.includes('Minh Tran') ? 'strong' : 'span');
+        if (author.includes('Minh Tran')) authorNode.className = 'highlight-name';
+        authorNode.textContent = author;
+        authorLine.appendChild(authorNode);
+
+        if (index < authors.length - 1) {
+            authorLine.appendChild(document.createTextNode(', '));
+        }
+    });
+
+    return authorLine;
+}
+
+function createLinks(links) {
+    if (!links || typeof links !== 'object') return null;
+
+    const linkDefinitions = [
+        ['pdf', 'PDF'],
+        ['code', 'Code'],
+        ['project', 'Project page'],
+        ['demo', 'Demo']
+    ];
+    const availableLinks = linkDefinitions.filter(([key]) => links[key]);
+
+    if (availableLinks.length === 0) return null;
+
+    const linkLine = document.createElement('p');
+    linkLine.className = 'publication-links';
+
+    availableLinks.forEach(([key, label]) => {
+        const link = document.createElement('a');
+        link.href = links[key];
+        link.textContent = label;
+        linkLine.appendChild(link);
+    });
+
+    return linkLine;
+}
+
+function createStatus(message, className) {
+    const status = document.createElement('p');
+    status.className = className;
+    status.textContent = message;
+    return status;
+}
+
+function openLightbox(src, title) {
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+
+    const img = document.createElement('img');
+    img.className = 'lightbox-image';
+    img.src = src;
+    img.alt = title || 'Preview';
+
+    overlay.appendChild(img);
+    document.body.appendChild(overlay);
+
+    requestAnimationFrame(() => overlay.classList.add('lightbox-visible'));
+
+    function close() {
+        overlay.classList.remove('lightbox-visible');
+        overlay.addEventListener('transitionend', () => overlay.remove(), { once: true });
+        document.removeEventListener('keydown', onKey);
+    }
+
+    function onKey(e) {
+        if (e.key === 'Escape') close();
+    }
+
+    overlay.addEventListener('click', close);
+    document.addEventListener('keydown', onKey);
 }
